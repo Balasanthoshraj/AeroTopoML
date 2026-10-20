@@ -1,0 +1,14 @@
+{
+  "k": 128,
+  "hidden": [
+    256,
+    256,
+    256
+  ],
+  "augment": true,
+  "post": {
+    "tau": 0.45,
+    "repair": false,
+    "clean": false
+  }
+}

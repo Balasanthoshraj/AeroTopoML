@@ -1,0 +1,275 @@
+{
+  "samples": 200,
+  "voxel_elements": 6084,
+  "void_stiffness": 1e-09,
+  "material": {
+    "E_Pa": 70000000000.0,
+    "nu": 0.3,
+    "yield_Pa": 450000000.0,
+    "h_m": 0.0025
+  },
+  "force_unit": "body force density N/m^3 (SELTO), voxel load = F * h^3, an eighth per corner node",
+  "total_load_N": {
+    "values": [
+      1500.0,
+      1666.7,
+      1750.0,
+      2000.0
+    ],
+    "min": 1499.9977898906532,
+    "max": 2000.0009857095479
+  },
+  "reference": {
+    "compliance_J": {
+      "mean": 0.06385968089020054,
+      "min": 0.009291444779077014,
+      "p5": 0.013231481222497971,
+      "p25": 0.024516403414441702,
+      "median": 0.05715432066707213,
+      "p75": 0.09949896568561822,
+      "p95": 0.13260375808835576,
+      "max": 0.15569213371744345
+    },
+    "maxdisp_mm": {
+      "mean": 0.05033605410189605,
+      "min": 0.007481012611578393,
+      "p5": 0.010304313385689066,
+      "p25": 0.02306162538586537,
+      "median": 0.05334848310258333,
+      "p75": 0.07313353610600268,
+      "p95": 0.09050074540892004,
+      "max": 0.10316118683686533
+    }
+  },
+  "stiffness_ratio_pred_over_ref": {
+    "mean": 1.0406425761743454,
+    "min": 0.5663677661055005,
+    "p5": 0.916517495718631,
+    "p25": 0.9953327487839972,
+    "median": 1.0310116560845404,
+    "p75": 1.086508569087444,
+    "p95": 1.175008500963174,
+    "max": 1.587017417846542
+  },
+  "maxdisp_ratio_pred_over_ref": {
+    "mean": 1.0311411300862547,
+    "min": 0.6842616967525051,
+    "p5": 0.7871374716073009,
+    "p25": 0.9214982032551875,
+    "median": 0.9960518133833685,
+    "p75": 1.1022939857380578,
+    "p95": 1.307868244976253,
+    "max": 2.4646838335722183
+  },
+  "volume_ratio_pred_over_ref": {
+    "mean": 1.0343278745768363,
+    "min": 0.9082007343941249,
+    "p5": 0.9617473701409313,
+    "p25": 1.0026928999328795,
+    "median": 1.032788503729706,
+    "p75": 1.0656559309796467,
+    "p95": 1.1177550608806588,
+    "max": 1.3008849557522124
+  },
+  "stiffness_per_volume_ratio": {
+    "mean": 1.004749417247436,
+    "min": 0.5497098906318094,
+    "p5": 0.9507741839968816,
+    "p25": 0.9852593593723884,
+    "median": 1.0032288403136802,
+    "p75": 1.023869185449334,
+    "p95": 1.062836968854014,
+    "max": 1.4198486884700936
+  },
+  "share_within": {
+    "5%": 0.48,
+    "10%": 0.755,
+    "20%": 0.95
+  },
+  "share_maxdisp_within": {
+    "10%": 0.57,
+    "20%": 0.775
+  },
+  "share_prediction_stiffer": 0.725,
+  "spearman": {
+    "dice_free_vs_abs_log_stiffness_ratio": -0.6796780017087352,
+    "log_volume_ratio_vs_log_stiffness_ratio": 0.913782687235753
+  },
+  "by_dice_free": {
+    "<0.9": {
+      "samples": 43,
+      "median_stiffness_ratio": 1.0829102514869096,
+      "share_within_10pct": 0.4186046511627907,
+      "min_stiffness_ratio": 0.5663677661055005,
+      "max_stiffness_ratio": 1.587017417846542
+    },
+    "0.9-0.95": {
+      "samples": 119,
+      "median_stiffness_ratio": 1.0400473055739297,
+      "share_within_10pct": 0.8067226890756303,
+      "min_stiffness_ratio": 0.8690570005408383,
+      "max_stiffness_ratio": 1.1757960602012227
+    },
+    ">=0.95": {
+      "samples": 38,
+      "median_stiffness_ratio": 1.0057633402309736,
+      "share_within_10pct": 0.9736842105263158,
+      "min_stiffness_ratio": 0.9457229884474363,
+      "max_stiffness_ratio": 1.1151726988327773
+    }
+  },
+  "high_overlap_but_different": {
+    "rule": "dice_free >= 0.9 and |stiffness ratio - 1| > 0.1",
+    "high_overlap_samples": 157,
+    "count": 24,
+    "stiffer": 23,
+    "beyond_20pct": 0,
+    "samples": [
+      {
+        "test_sample": 160,
+        "dice_free": 0.9182643794147326,
+        "stiffness_ratio": 0.8690570005408383,
+        "volume_ratio": 0.9082007343941249
+      },
+      {
+        "test_sample": 133,
+        "dice_free": 0.9041487839771102,
+        "stiffness_ratio": 1.100536542628487,
+        "volume_ratio": 1.1006600660066006
+      },
+      {
+        "test_sample": 136,
+        "dice_free": 0.9181494661921709,
+        "stiffness_ratio": 1.1013625554803381,
+        "volume_ratio": 1.065597667638484
+      },
+      {
+        "test_sample": 101,
+        "dice_free": 0.9267192784667418,
+        "stiffness_ratio": 1.1025008698496968,
+        "volume_ratio": 1.0609929078014184
+      },
+      {
+        "test_sample": 132,
+        "dice_free": 0.9121621621621622,
+        "stiffness_ratio": 1.1027490774398343,
+        "volume_ratio": 1.0715307582260372
+      },
+      {
+        "test_sample": 36,
+        "dice_free": 0.9090909090909091,
+        "stiffness_ratio": 1.1046848182973201,
+        "volume_ratio": 1.0907715582450832
+      },
+      {
+        "test_sample": 33,
+        "dice_free": 0.9222929936305733,
+        "stiffness_ratio": 1.1086908862487825,
+        "volume_ratio": 1.0783410138248848
+      },
+      {
+        "test_sample": 45,
+        "dice_free": 0.9291521486643438,
+        "stiffness_ratio": 1.1089783122315318,
+        "volume_ratio": 1.0770348837209303
+      },
+      {
+        "test_sample": 155,
+        "dice_free": 0.9113607990012484,
+        "stiffness_ratio": 1.1093072420467318,
+        "volume_ratio": 1.0866261398176291
+      },
+      {
+        "test_sample": 105,
+        "dice_free": 0.915929203539823,
+        "stiffness_ratio": 1.1131358114465097,
+        "volume_ratio": 1.0704225352112675
+      },
+      {
+        "test_sample": 6,
+        "dice_free": 0.9560723514211886,
+        "stiffness_ratio": 1.1151726988327773,
+        "volume_ratio": 1.049306625577812
+      },
+      {
+        "test_sample": 60,
+        "dice_free": 0.904487917146145,
+        "stiffness_ratio": 1.1160591505001771,
+        "volume_ratio": 1.074235807860262
+      },
+      {
+        "test_sample": 102,
+        "dice_free": 0.9234449760765551,
+        "stiffness_ratio": 1.1188533967307,
+        "volume_ratio": 1.0557184750733137
+      },
+      {
+        "test_sample": 59,
+        "dice_free": 0.9032258064516129,
+        "stiffness_ratio": 1.1209753389673383,
+        "volume_ratio": 1.1009933774834437
+      },
+      {
+        "test_sample": 30,
+        "dice_free": 0.9150823827629911,
+        "stiffness_ratio": 1.1219882494437425,
+        "volume_ratio": 1.0876923076923077
+      },
+      {
+        "test_sample": 16,
+        "dice_free": 0.9281914893617021,
+        "stiffness_ratio": 1.1308642475518973,
+        "volume_ratio": 1.069182389937107
+      },
+      {
+        "test_sample": 29,
+        "dice_free": 0.9197452229299363,
+        "stiffness_ratio": 1.1354689043132233,
+        "volume_ratio": 1.0847457627118644
+      },
+      {
+        "test_sample": 104,
+        "dice_free": 0.9111969111969112,
+        "stiffness_ratio": 1.1398523339188027,
+        "volume_ratio": 1.082170542635659
+      },
+      {
+        "test_sample": 127,
+        "dice_free": 0.9066985645933014,
+        "stiffness_ratio": 1.1451239382245464,
+        "volume_ratio": 1.0835820895522388
+      },
+      {
+        "test_sample": 181,
+        "dice_free": 0.9177288528389339,
+        "stiffness_ratio": 1.147269420784378,
+        "volume_ratio": 1.0921052631578947
+      },
+      {
+        "test_sample": 53,
+        "dice_free": 0.9053892215568863,
+        "stiffness_ratio": 1.1524747636798638,
+        "volume_ratio": 1.091454272863568
+      },
+      {
+        "test_sample": 180,
+        "dice_free": 0.9027431421446384,
+        "stiffness_ratio": 1.153042808650572,
+        "volume_ratio": 1.1076923076923078
+      },
+      {
+        "test_sample": 80,
+        "dice_free": 0.9146919431279621,
+        "stiffness_ratio": 1.1654534920204764,
+        "volume_ratio": 1.0915805022156573
+      },
+      {
+        "test_sample": 103,
+        "dice_free": 0.9058971141781681,
+        "stiffness_ratio": 1.1757960602012227,
+        "volume_ratio": 1.0937019969278035
+      }
+    ]
+  },
+  "runtime_s": 361.9288683999912
+}

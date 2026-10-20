@@ -1,0 +1,34 @@
+{
+  "config": {
+    "k": 128,
+    "hidden": [
+      256,
+      256,
+      256
+    ],
+    "augment": true,
+    "post": {
+      "tau": 0.45,
+      "repair": false,
+      "clean": false
+    }
+  },
+  "test": {
+    "dice": 0.9526621073270928,
+    "iou": 0.9104284115629189,
+    "dice_free": 0.9205221035390414,
+    "iou_free": 0.85476688129129,
+    "vol_err": 0.048408854619378265,
+    "violation": 0.0007847022409025306,
+    "components": 1.02,
+    "joined": 1.0
+  },
+  "inference_ms_single": 0.5386000048019923,
+  "inference_ms_per_sample_batch": 0.217419999971753,
+  "split": {
+    "train": 1208,
+    "validation": 301,
+    "test": 200
+  },
+  "runtime_s": 1420.2535581588745
+}

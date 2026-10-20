@@ -1,0 +1,10 @@
+numpy==2.5.4
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+torch==2.14.1
+pyvista==0.49.1
+plotly==7.1.0
+streamlit==1.66.0
+pypardiso==0.4.7; platform_machine == "AMD64" or platform_machine == "x86_64"  # optional: about 9x faster part optimisation (pulls in Intel MKL, about 215 MB, x86-64 only); without it SciPy's SuperLU is used

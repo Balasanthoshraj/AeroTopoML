@@ -1,0 +1,11 @@
+# the virtual environment is rebuilt from requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# the dataset download (23.9 MB) and its unpacked CSVs (about 400 MB) are rebuilt by src/fetch_data.py; data/processed is kept
+data/downloads/
+data/raw/
+
+# local tool settings
+.claude/

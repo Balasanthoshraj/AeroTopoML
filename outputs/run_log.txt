@@ -1,0 +1,76 @@
+split: 1208 train / 301 internal validation / 200 test (supplied)
+reference              fixed regions only                   val  dice 0.584 | free voxels: dice 0.000 iou 0.000 | joined 0.00
+reference              1-NN on load features                val  dice 0.884 | free voxels: dice 0.802 iou 0.687 | joined 0.97
+reference              fixed regions only                   test dice 0.585 | free voxels: dice 0.000 iou 0.000 | joined 0.00
+reference              1-NN on load features                test dice 0.889 | free voxels: dice 0.810 iou 0.696 | joined 0.98
+PCA reconstruction     k=32                                 val  dice 0.918 | free voxels: dice 0.858 iou 0.756 | joined 0.91
+PCA reconstruction     k=32                                 test dice 0.921 | free voxels: dice 0.863 iou 0.763 | joined 0.89
+PCA reconstruction     k=64                                 val  dice 0.952 | free voxels: dice 0.919 iou 0.852 | joined 0.99
+PCA reconstruction     k=64                                 test dice 0.953 | free voxels: dice 0.920 iou 0.853 | joined 1.00
+PCA reconstruction     k=128                                val  dice 0.969 | free voxels: dice 0.947 iou 0.900 | joined 1.00
+PCA reconstruction     k=128                                test dice 0.969 | free voxels: dice 0.947 iou 0.900 | joined 1.00
+PCA reconstruction     k=256                                val  dice 0.978 | free voxels: dice 0.963 iou 0.929 | joined 1.00
+PCA reconstruction     k=256                                test dice 0.979 | free voxels: dice 0.964 iou 0.931 | joined 1.00
+linear + PCA           k=32                                 val  dice 0.769 | free voxels: dice 0.561 iou 0.403 | joined 0.13
+MLP + PCA              k=32                                 val  dice 0.907 | free voxels: dice 0.840 iou 0.730 | joined 0.92
+MLP + PCA              k=32                                 val  dice 0.908 | free voxels: dice 0.841 iou 0.731 | joined 0.91
+MLP + PCA              k=32                                 val  dice 0.908 | free voxels: dice 0.841 iou 0.731 | joined 0.92
+linear + PCA           k=64                                 val  dice 0.773 | free voxels: dice 0.564 iou 0.408 | joined 0.16
+MLP + PCA              k=64                                 val  dice 0.934 | free voxels: dice 0.888 iou 0.802 | joined 0.99
+MLP + PCA              k=64                                 val  dice 0.935 | free voxels: dice 0.890 iou 0.806 | joined 1.00
+MLP + PCA              k=64                                 val  dice 0.934 | free voxels: dice 0.888 iou 0.803 | joined 1.00
+linear + PCA           k=128                                val  dice 0.773 | free voxels: dice 0.564 iou 0.407 | joined 0.18
+MLP + PCA              k=128                                val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+MLP + PCA              k=128                                val  dice 0.940 | free voxels: dice 0.898 iou 0.820 | joined 1.00
+MLP + PCA              k=128                                val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+linear + PCA           k=256                                val  dice 0.772 | free voxels: dice 0.563 iou 0.407 | joined 0.17
+MLP + PCA              k=256                                val  dice 0.942 | free voxels: dice 0.902 iou 0.826 | joined 1.00
+MLP + PCA              k=256                                val  dice 0.944 | free voxels: dice 0.904 iou 0.829 | joined 1.00
+MLP + PCA              k=256                                val  dice 0.943 | free voxels: dice 0.902 iou 0.826 | joined 1.00
+-> PCA dimension (smallest within 0.005 of the best MLP score): k=128
+MLP size               2x32                                 val  dice 0.897 | free voxels: dice 0.822 iou 0.706 | joined 0.93
+MLP size               2x32                                 val  dice 0.898 | free voxels: dice 0.823 iou 0.706 | joined 0.92
+MLP size               2x32                                 val  dice 0.898 | free voxels: dice 0.825 iou 0.708 | joined 0.94
+MLP size               2x64                                 val  dice 0.929 | free voxels: dice 0.879 iou 0.789 | joined 0.99
+MLP size               2x64                                 val  dice 0.930 | free voxels: dice 0.880 iou 0.790 | joined 1.00
+MLP size               2x64                                 val  dice 0.929 | free voxels: dice 0.879 iou 0.788 | joined 1.00
+MLP size               2x128                                val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+MLP size               2x128                                val  dice 0.940 | free voxels: dice 0.898 iou 0.820 | joined 1.00
+MLP size               2x128                                val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+MLP size               2x256                                val  dice 0.945 | free voxels: dice 0.906 iou 0.833 | joined 1.00
+MLP size               2x256                                val  dice 0.946 | free voxels: dice 0.908 iou 0.836 | joined 1.00
+MLP size               2x256                                val  dice 0.946 | free voxels: dice 0.908 iou 0.835 | joined 1.00
+MLP size               3x256                                val  dice 0.948 | free voxels: dice 0.911 iou 0.840 | joined 1.00
+MLP size               3x256                                val  dice 0.948 | free voxels: dice 0.912 iou 0.842 | joined 1.00
+MLP size               3x256                                val  dice 0.948 | free voxels: dice 0.912 iou 0.842 | joined 1.00
+-> MLP size (smallest within 0.003 of the best): 3x256
+input features         plain cos/sin (8 numbers)            val  dice 0.932 | free voxels: dice 0.884 iou 0.797 | joined 1.00
+input features         with harmonics (20 numbers)          val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+input features         plain cos/sin (8 numbers)            val  dice 0.931 | free voxels: dice 0.883 iou 0.796 | joined 1.00
+input features         with harmonics (20 numbers)          val  dice 0.940 | free voxels: dice 0.898 iou 0.820 | joined 1.00
+input features         plain cos/sin (8 numbers)            val  dice 0.934 | free voxels: dice 0.887 iou 0.802 | joined 0.99
+input features         with harmonics (20 numbers)          val  dice 0.942 | free voxels: dice 0.901 iou 0.824 | joined 1.00
+symmetry augmentation  3x256, 8x training data              val  dice 0.951 | free voxels: dice 0.917 iou 0.849 | joined 1.00
+symmetry augmentation  3x256, 8x training data              val  dice 0.951 | free voxels: dice 0.917 iou 0.850 | joined 1.00
+-> symmetry augmentation helps on validation
+threshold              tau=0.20                             val  dice 0.904 | free voxels: dice 0.846 iou 0.735 | joined 1.00
+threshold              tau=0.25                             val  dice 0.918 | free voxels: dice 0.868 iou 0.769 | joined 1.00
+threshold              tau=0.30                             val  dice 0.931 | free voxels: dice 0.886 iou 0.799 | joined 1.00
+threshold              tau=0.35                             val  dice 0.941 | free voxels: dice 0.902 iou 0.824 | joined 1.00
+threshold              tau=0.40                             val  dice 0.947 | free voxels: dice 0.912 iou 0.842 | joined 1.00
+threshold              tau=0.45                             val  dice 0.951 | free voxels: dice 0.918 iou 0.851 | joined 1.00
+threshold              tau=0.50                             val  dice 0.951 | free voxels: dice 0.917 iou 0.850 | joined 1.00
+threshold              tau=0.55                             val  dice 0.948 | free voxels: dice 0.910 iou 0.838 | joined 1.00
+threshold              tau=0.60                             val  dice 0.941 | free voxels: dice 0.897 iou 0.816 | joined 1.00
+threshold              tau=0.65                             val  dice 0.930 | free voxels: dice 0.877 iou 0.784 | joined 1.00
+threshold              tau=0.70                             val  dice 0.917 | free voxels: dice 0.852 iou 0.745 | joined 1.00
+post-processing        threshold only                       val  dice 0.951 | free voxels: dice 0.918 iou 0.851 | joined 1.00
+post-processing        + reconnect load and supports        val  dice 0.951 | free voxels: dice 0.918 iou 0.851 | joined 1.00
+post-processing        + remove floating material           val  dice 0.951 | free voxels: dice 0.918 iou 0.851 | joined 1.00
+post-processing        + both                               val  dice 0.951 | free voxels: dice 0.918 iou 0.851 | joined 1.00
+-> post-processing: threshold only, {'tau': 0.45, 'repair': False, 'clean': False}
+final                  linear + PCA, tau 0.5                test dice 0.782 | free voxels: dice 0.585 iou 0.428 | joined 0.20
+final                  linear + PCA, tuned post-processing  test dice 0.799 | free voxels: dice 0.632 iou 0.476 | joined 0.39
+final                  MLP + PCA, tau 0.5                   test dice 0.954 | free voxels: dice 0.922 iou 0.858 | joined 1.00
+final                  MLP + PCA, tuned post-processing     test dice 0.953 | free voxels: dice 0.921 iou 0.855 | joined 1.00
+done in 1421 s; test: {'dice': 0.9526621073270928, 'iou': 0.9104284115629189, 'dice_free': 0.9205221035390414, 'iou_free': 0.85476688129129, 'vol_err': 0.048408854619378265, 'violation': 0.0007847022409025306, 'components': 1.02, 'joined': 1.0}
